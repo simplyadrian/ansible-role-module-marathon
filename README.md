@@ -9,9 +9,9 @@ Role Variables
 
 | Variable        | Required           | Default  | Description |
 | ------------- |:--------------:| -----:| -------------------------------------------------------------------------:|
-| marathon_uri | true | https://dev-dcos-master.mgage.io/ | Base URI of the Marathon Master
+| marathon_uri | true | https://localhost/ | Base URI of the Marathon Master
 | app_id | true | | The Marathon appId, used via <marathon>/v2/apps/:app_id
-| app_json | treu | | The Marathon app descriptor (app.json)
+| app_json | true | | The Marathon app descriptor (app.json)
 
 Example Playbook
 ----------------

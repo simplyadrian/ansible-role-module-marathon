@@ -3,7 +3,7 @@
 
 - name: call marathon module
   marathon:
-    marathon_url: "{{ item.marathon_url|default('https://dev-dcos-master.mgage.io/') }}"
-    app_id: "{{ item.app_id|default(omit) }}"
-    app_json: "{{ item.app_json|default(omit) }}"
-  with_items: "{{ marathon_app|default([]) }}"
+    marathon_url: "{{ item.marathon_url|default('https://localhost/') }}"
+    app_id: "{{ item.app_id }}"
+    app_json: "{{ item.app_json }}"
+  with_items: "{{ app_id|default([]) }}"
