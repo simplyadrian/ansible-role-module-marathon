@@ -3,7 +3,7 @@
 
 - name: call marathon module
   marathon:
-    marathon_uri: "{{ item.marathon_url|default('https://localhost/') }}"
+    marathon_uri: "{{ item.marathon_uri|default('https://localhost/') }}"
     app_id: "{{ item.app_id }}"
     app_json: "{{ item.app_json }}"
   with_items: "{{ app_ids|default([]) }}"
